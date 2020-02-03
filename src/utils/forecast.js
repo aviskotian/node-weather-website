@@ -11,7 +11,6 @@ const forecast = (latitude, longitude, callback) =>{
         } else if(body.error){
             callback('Unable to find location', undefined);
         } else {
-            console.log(JSON.stringify(body));
             const temp =  body.currently.temperature;
             const tempLow = body.daily.data[0].temperatureLow;
             const tempHigh = body.daily.data[0].temperatureHigh;

@@ -57,7 +57,6 @@ app.get('/weather', (req, res) =>{
         if(error){
             return res.send({ error })
         }
-        console.log({ latitude, longitude, location});
         forecast(latitude, longitude, (error, forecastData) => {
             if(error){
                 res.send({error})
@@ -92,7 +91,6 @@ app.get('/products', (req, res) =>{
     }
 
     const a = req.query.search;
-    console.log(req.query);
     res.send({
         products:[
             a
